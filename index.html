@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>С Днем Рождения, Любимый!</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;900&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Контейнер для цветов -->
+    <div id="flower-container"></div>
+
+    <!-- Экран 1: Коробка -->
+    <div id="screen-box" class="screen active">
+        <h1 class="main-title title-color">HAPPY BIRTHDAY MY LOVE</h1>
+        <p class="subtitle subtitle-color">CLICK THE GIFT TO OPEN YOUR SURPRISE</p>
+
+        <div class="gift-box" onclick="openGift()">
+            <img src="gift.png" alt="Подарок">
+        </div>
+    </div>
+
+    <!-- Экран 2: Меню -->
+    <div id="screen-menu" class="screen">
+        <h1 class="main-title title-color" style="font-size: 42px;">PRESENTS FOR YOU</h1>
+        <p class="subtitle subtitle-color" style="font-size: 20px; margin-bottom: 40px;">CLICK ANY GIFT TO OPEN</p>
+
+        <div class="menu-icons">
+            <!-- Иконка 1: Фото -->
+            <div class="icon" onclick="showScreen('screen-photos')">
+                <img src="icon-photo.png" alt="Фото">
+                <span>Фото</span>
+            </div>
+
+            <!-- Иконка 2: Музыка -->
+            <div class="icon" onclick="showScreen('screen-music')">
+                <img src="icon-music.png" alt="Музыка">
+                <span>Музыка</span>
+            </div>
+
+            <!-- Иконка 3: Письмо -->
+            <div class="icon" onclick="showScreen('screen-letter')">
+                <img src="icon-letter.png" alt="Письмо">
+                <span>Письмо</span>
+            </div>
+        </div>
+    </div>
+
+           <!-- Экран 3: Фотографии -->
+    <div id="screen-photos" class="screen">
+        <!-- Добавили margin-top: 20px, чтобы опустить текст -->
+        <h2 class="main-title title-color" style="font-size: 36px; margin-top: 20px; margin-bottom: 10px;">Наши моменты</h2>
+
+        <div class="photo-collage">
+            <div class="polaroid p1"><img src="photo1.jpg" alt="Фото 1"></div>
+            <div class="polaroid p2"><img src="photo2.jpg" alt="Фото 2"></div>
+            <div class="polaroid p3"><img src="photo3.jpg" alt="Фото 3"></div>
+            <div class="polaroid p4"><img src="photo4.jpg" alt="Фото 4"></div>
+            <div class="polaroid p5"><img src="photo5.jpg" alt="Фото 5"></div>
+            <div class="polaroid p6"><img src="photo6.jpg" alt="Фото 6"></div>
+            <div class="polaroid p7"><img src="photo7.jpg" alt="Фото 7"></div>
+            <div class="polaroid p8"><img src="photo8.jpg" alt="Фото 8"></div>
+            <div class="polaroid p9"><img src="photo9.jpg" alt="Фото 9"></div>
+            <div class="polaroid p10"><img src="photo10.jpg" alt="Фото 10"></div>
+        </div>
+
+        <!-- Убрали margin-top, чтобы кнопка поднялась вверх -->
+        <button class="back-btn" onclick="showScreen('screen-menu')">BACK</button>
+    </div>
+
+          <!-- Экран 4: Музыка -->
+    <div id="screen-music" class="screen" style="min-height: 500px;">
+        <h2 class="main-title title-color" style="font-size: 32px; margin-bottom: 20px;">Песня, которая напоминает мне о нас</h2>
+
+        <div class="music-layout">
+            <!-- Левая колонка: Текст песни -->
+            <div class="lyrics-box">
+                <h3>Текст песни</h3>
+                <p>
+                    Things fall apart and time breaks your heart<br>
+                    I wasn't there, but I know<br>
+                    She was your girl, you showed her the world<br>
+                    You fell out of love, and you both let go<br>
+                    She was cryin' on my shoulder<br>
+                    All I could do was hold her<br>
+                    Only made us closer until July<br>
+                    And I know that you love me<br>
+                    You don't need to remind me<br>
+                    I should put it all behind me, shouldn't I?<br><br>
+                    But I see her in the back of my mind<br>
+                    All the time<br>
+                    Like a fever, like I'm burning alive<br>
+                    Like a sign<br>
+                    Did I cross the line?<br><br>
+                    Mm, hm<br>
+                    Well, good things don't last (good things don't last)<br>
+                    And life moves so fast (life moves so fast)<br>
+                    I'd never ask who was better (I'd never ask who was better)<br>
+                    'Cause she couldn't be (she couldn't be)<br>
+                    More different from me (more different from me)<br>
+                    Happy and free (happy and free) in leather<br><br>
+                    And I know that you love me (you love me)<br>
+                    You don't need to remind me (remind me)<br>
+                    Wanna put it all behind me, but, baby<br><br>
+                    I see her in the back of my mind (back of my mind)<br>
+                    All the time (all the time)<br>
+                    Feels like a fever (like a fever), like I'm burning alive (burning alive)<br>
+                    Like a sign<br>
+                    Did I cross the line?<br><br>
+                    You say no one knows you so well (so)<br>
+                    But every time you touch me, I just wonder how she felt<br>
+                    Valentine's Day, crying in the hotel<br>
+                    I know you didn't mean to hurt me, so I kept it to myself (oh)<br><br>
+                    And I wonder<br>
+                    Do you see her in the back of your mind?<br>
+                    In my eyes?<br><br>
+                    You say no one knows you so well<br>
+                    But every time you touch me, I just wonder how she felt<br>
+                    Valentine's Day, crying in the hotel<br>
+                    I know you didn't mean to hurt me, so I kept it to myself
+                </p>
+            </div>
+
+            <!-- Правая колонка: Видео -->
+            <div class="video-container">
+                <video controls preload="auto" playsinline>
+                    <source src="music.mp4" type="video/mp4">
+                    Твой браузер не поддерживает видео.
+                </video>
+            </div>
+        </div>
+
+        <button class="back-btn" onclick="showScreen('screen-menu')">BACK</button>
+    </div>
+
+    <!-- Экран 5: Письмо -->
+    <div id="screen-letter" class="screen">
+        <div class="letter-paper">
+            <h3>Dear Love,</h3>
+            <p>Я не думаю, что говорю это достаточно часто, но ты значишь для меня больше, чем можно выразить словами. В суете всего происходящего — в загруженные дни, в тихие ночи, на расстоянии или рядом — ты всегда в моих мыслях. Мелочи напоминают мне о тебе, и почему-то всё кажется легче, когда я знаю, что ты часть моей жизни. Ты стал моим безопасным местом, моей любимой мыслью и человеком, от которого я никогда не устану.</p>
+            <p>Неважно, куда приведет нас жизнь. Я просто хочу, чтобы ты знал: то, что у нас есть — это реально. Это в воспоминаниях, которые мы уже создали, и во всех моментах, когда я жду тебя. Мне не нужны идеальные дни, мне просто нужен ты в них. И если бы мне пришлось всё начать заново, я бы всё равно выбрала тебя — в каждой версии этой жизни, каждый раз.</p>
+        </div>
+        <button class="back-btn" onclick="showScreen('screen-menu')">BACK</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
